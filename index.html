@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="Brastlewark" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="Brastlewark" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="Brastlewark" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="Brastlewark" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Brastlewark</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="bower_components/angular/b">
+  <link rel="stylesheet" href="css/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-controller="appCtrl">
+
+
+  <div ng-view></div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+
+  <script src="app.js"></script>
+
+  <script src="services/connectionRest.js"></script>
+  <script src="services/getDataService.js"></script>
+  <script src="services/constants.js"></script>
+
+  <script src="components/controllers/personRow.js"></script>
+  <script src="components/controllers/personInfoModal.js"></script>
+
+  <script src="models/personsList.js"></script>
+  <script src="models/person.js"></script>
+
+  <script src="js/brastlewarkList.js"></script>
+  <script src="js/view2.js"></script>
+</body>
+</html>

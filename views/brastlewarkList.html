@@ -1,0 +1,22 @@
+<person-info-modal ng-show="isOpenDetail()"
+    person-selected="selected"
+></person-info-modal>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">
+                Search
+            </span>
+            <input type="text" ng-model="name" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12" ng-repeat="person in selected.list.getAllPersons() | filter:search | filter:filterNameFunc">
+        <person-row
+                person="person"
+                person-selected="selected"
+        ></person-row>
+    </div>
+</div>

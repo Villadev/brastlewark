@@ -1,0 +1,29 @@
+<div class="infoDetail">
+    <div class="otherline"></div>
+    <div class="presonModal">
+        <div class="row">
+            <div class="col-md-12">
+                <button type="button" class="btn btn-secondary" ng-click="$ctrl.closeInfoDetail()">Close</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <img class="img-responsive img-circle" src="{{$ctrl.getPerson().getImage()}}">
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <h3>{{$ctrl.getPerson.getName()}}</h3>
+                <h4>Age: </h4><p>{{$ctrl.getPerson().getAge()}}</p>
+                <h4>Hair color: </h4><p>{{$ctrl.getPerson().getHairColor()}}</p>
+                <h4>Height: </h4><p>{{$ctrl.getPerson().getHeight()}}</p>
+            </div>
+            <div class="col-md-6 col-xs-12" ng-show="($ctrl.getPerson().getFriends().length > 1)">
+                <h3>Friends</h3>
+                <button type="button" class="btn btn-light" ng-repeat="friend in $ctrl.getPerson().getFriends()" ng-click="$ctrl.changePreson(friend)">{{friend}}</button>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <h3>Professions:</h3>
+                <h4 ng-repeat="profession in $ctrl.getPerson().getProfessions()">{{profession}}</h4>
+            </div>
+        </div>
+    </div>
+</div>
